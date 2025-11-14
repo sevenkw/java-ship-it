@@ -15,7 +15,7 @@ public abstract class Parcel {
 
     public abstract void packageItem();
 
-    public abstract double getBaseRate();
+    protected abstract double getBaseRate();
 
     public void deliver() {
         System.out.println("Посылка " + description + " доставлена по адресу " + deliveryAddress);

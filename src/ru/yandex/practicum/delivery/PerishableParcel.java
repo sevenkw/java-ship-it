@@ -2,7 +2,7 @@ package ru.yandex.practicum.delivery;
 //скоропортящаяся
 public class PerishableParcel extends Parcel {
     private int timeToLive;
-    public final static double BASE_RATE = 3.0;
+    private final static double BASE_RATE = 3.0;
 
     public PerishableParcel (String description, double weight, String deliveryAddress, int sendDay, int timeToLive) {
         super(description, weight, deliveryAddress, sendDay);
@@ -24,7 +24,7 @@ public class PerishableParcel extends Parcel {
     }
 
     public boolean isExpired (int currentDay) {
-        boolean result;
+
         if (sendDay + timeToLive >= currentDay) {
             return false;
         } else {

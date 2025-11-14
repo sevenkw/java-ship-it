@@ -2,7 +2,7 @@ package ru.yandex.practicum.delivery;
 //хрупкая
 public class FragileParcel extends Parcel implements Trackable  {
 
-    public final static double BASE_RATE = 4;
+    private final static double BASE_RATE = 4;
 
     public FragileParcel (String description, double weight, String deliveryAddress, int sendDay) {
         super(description, weight, deliveryAddress, sendDay);
